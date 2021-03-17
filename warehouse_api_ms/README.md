@@ -24,11 +24,11 @@ git checkout warehouse_api_ms_init_config
 - Copy the whole contents of the `warehouse_api_ms` folder to your project
 - Switch to you project and check the project build
 ```
-gradlew
+./gradlew
 ```
 - Check the project run
 ```
-gradlew bootRun
+./gradlew bootRun
 ```
 - Create a `warehouse_api_ms_init_config` branch
 ```
