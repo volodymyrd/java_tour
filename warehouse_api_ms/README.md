@@ -50,4 +50,37 @@ git checkout main
 git pull
 ```
 ### Create a first controller
-- 
+- Go to the `java_tour` project on your computer and switch to the `warehouse_api_ms_api_rest_controller` branch
+```
+git checkout warehouse_api_ms_api_rest_controller
+```
+- Go to your project and switch to the `master` branch
+```
+git checkout master
+```
+- Create you a new branch 
+```
+git checkout -b rest_controller
+```
+- Copy `warehouse_api_ms` to your project (replace all files in your project).
+- Check status
+```
+git status
+```
+-- Commit the changes
+```
+git add .
+git status
+git commit -m 'add rest controller'
+git push
+```
+- Check your project build
+```
+./gradlew
+```
+- Check your project run
+```
+./gradlew bootRun
+```
+### Open your project in the IDE and configure it
+- Open IDE and open your project in it
