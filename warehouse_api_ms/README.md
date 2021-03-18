@@ -82,5 +82,7 @@ git push
 ```
 ./gradlew bootRun
 ```
+- Open the browser with [url](http://localhost:8080/v1/warehouse/api/version)
+
 ### Open your project in the IDE and configure it
 - Open IDE and open your project in it
