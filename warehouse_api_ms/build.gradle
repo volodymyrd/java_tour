@@ -52,6 +52,8 @@ subprojects {
     }
 
     test {
+        useJUnitPlatform()
+
         testLogging {
             afterSuite { desc, result ->
                 if (!desc.parent) { // will match the outermost suite
