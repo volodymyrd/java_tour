@@ -1,0 +1,9 @@
+dependencies {
+//    implementation 'org.apache.commons:commons-text'
+//    implementation project(':utilities')
+}
+
+//application {
+//    // Define the main class for the application.
+//    mainClass = 'com.volmyr.warehouse_api_ms_v2.app.App'
+//}
