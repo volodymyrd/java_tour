@@ -12,6 +12,15 @@ class WarehouseServiceImplTest {
   private WarehouseService warehouseService = new WarehouseServiceImpl(10);
 
   @Test
+  void shouldCountsGoods() {
+    // Arrange
+    warehouseService = new WarehouseServiceImpl(20);
+
+    // Act and Assert
+    assertThat(warehouseService.count()).isEqualTo(20);
+  }
+
+  @Test
   void shouldAddNewGoods() {
     // Arrange
     long numberOfGoodsBefore = warehouseService.count();
