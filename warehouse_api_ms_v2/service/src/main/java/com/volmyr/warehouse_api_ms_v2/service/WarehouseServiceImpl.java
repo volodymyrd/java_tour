@@ -1,5 +1,7 @@
 package com.volmyr.warehouse_api_ms_v2.service;
 
+import com.volmyr.warehouse_api_ms_v2.domain.Goods;
+
 /**
  * Implementation of {@link WarehouseService}.
  */
@@ -12,7 +14,7 @@ public final class WarehouseServiceImpl implements WarehouseService {
   }
 
   @Override
-  public void add() {
+  public void add(Goods goods) {
     numberOfGoods++;
   }
 
