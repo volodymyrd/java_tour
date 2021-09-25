@@ -1,6 +1,6 @@
 // SonarLint
 plugins {
-    id "name.remal.sonarlint" version "1.2.2"
+    id "name.remal.sonarlint" version "1.4.0"
 }
 
 defaultTasks 'clean', 'build'
