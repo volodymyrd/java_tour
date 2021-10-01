@@ -2,6 +2,7 @@ package com.volmyr.warehouse_api_ms_v2.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.volmyr.warehouse_api_ms_v2.domain.Goods;
 import com.volmyr.warehouse_api_ms_v2.repository.WarehouseRepository;
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +28,7 @@ class WarehouseServiceImplTest {
     long numberOfGoodsBefore = warehouseService.count();
 
     // Act
-    warehouseService.add();
+    warehouseService.add(new Goods("table", 12.0));
 
     // Assert
     assertThat(warehouseService.count()).isEqualTo(numberOfGoodsBefore + 1);
