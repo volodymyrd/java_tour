@@ -3,6 +3,7 @@ package com.volmyr.warehouse_api_ms_v2.service;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.volmyr.warehouse_api_ms_v2.domain.Goods;
+import com.volmyr.warehouse_api_ms_v2.repository.WarehouseRepository;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -10,12 +11,12 @@ import org.junit.jupiter.api.Test;
  */
 class WarehouseServiceImplTest {
 
-  private WarehouseService warehouseService = new WarehouseServiceImpl(10);
+  private WarehouseService warehouseService = new WarehouseServiceImpl(new WarehouseRepository(10));
 
   @Test
   void shouldCountsGoods() {
     // Arrange
-    warehouseService = new WarehouseServiceImpl(20);
+    warehouseService = new WarehouseServiceImpl(new WarehouseRepository(20));
 
     // Act and Assert
     assertThat(warehouseService.count()).isEqualTo(20);
