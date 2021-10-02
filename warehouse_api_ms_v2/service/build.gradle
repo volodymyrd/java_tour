@@ -1,3 +1,4 @@
 dependencies {
     testImplementation libs.test
+    testImplementation platform(boms.test)
 }
