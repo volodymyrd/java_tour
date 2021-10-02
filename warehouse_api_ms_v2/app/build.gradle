@@ -17,6 +17,7 @@ dependencies {
 
     testImplementation libs.spring_test
     testImplementation libs.test
+    testImplementation platform(boms.test)
 }
 
 springBoot {
