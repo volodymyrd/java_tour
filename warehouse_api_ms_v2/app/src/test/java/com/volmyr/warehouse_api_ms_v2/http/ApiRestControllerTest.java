@@ -3,7 +3,7 @@ package com.volmyr.warehouse_api_ms_v2.http;
 import static com.volmyr.warehouse_api_ms_v2.http.ApiRestController.VERSION;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -52,7 +52,7 @@ class ApiRestControllerTest {
   @Test
   void shouldAddGoods() throws Exception {
     mockMvc.perform(
-            put("/api/v1/warehouse/goods")
+            post("/api/v1/warehouse/goods")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(OBJECT_MAPPER.writeValueAsString(new AddGoodsRequest("table", 20.0))))
         .andExpect(status().isOk())

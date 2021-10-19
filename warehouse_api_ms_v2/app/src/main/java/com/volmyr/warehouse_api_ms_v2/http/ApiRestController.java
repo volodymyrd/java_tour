@@ -11,7 +11,7 @@ import com.volmyr.warehouse_api_ms_v2.service.WarehouseService;
 import com.volmyr.warehouse_api_ms_v2.service.WarehouseServiceImpl;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,7 +39,7 @@ public final class ApiRestController {
     return new VersionResponse(VERSION);
   }
 
-  @PutMapping(value = {"/warehouse/goods"})
+  @PostMapping(value = {"/warehouse/goods"})
   public AddGoodsResponse addGoods(@RequestBody AddGoodsRequest addGoodsRequest) {
     Goods goods = new Goods(addGoodsRequest.getName(), addGoodsRequest.getPrice());
     warehouseService.add(goods);
